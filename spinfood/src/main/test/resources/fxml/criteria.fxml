@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CriteriaController">
+   <children>
+      <ChoiceBox fx:id="pairingFirstPriority" layoutX="102.0" layoutY="95.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="pairingSecondPriority" layoutX="102.0" layoutY="152.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="pairingThirdPriority" layoutX="102.0" layoutY="208.0" prefWidth="150.0" />
+      <Label layoutX="21.0" layoutY="99.0" prefHeight="18.0" prefWidth="95.0" text="Priority 1" />
+      <Label layoutX="21.0" layoutY="212.0" prefHeight="18.0" prefWidth="95.0" text="Priority 3" />
+      <Label layoutX="22.0" layoutY="155.0" prefHeight="18.0" prefWidth="95.0" text="Priority 2" />
+      <Label alignment="CENTER" layoutX="-8.0" prefHeight="18.0" prefWidth="593.0" text="Set prioreties">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveCriteriaButton" layoutX="230.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#setPriorities" prefHeight="26.0" prefWidth="104.0" text="Set" />
+      <ChoiceBox fx:id="groupingFirstPriority" layoutX="291.0" layoutY="95.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="groupingSecondPriority" layoutX="291.0" layoutY="151.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="groupingThirdPriority" layoutX="291.0" layoutY="208.0" prefWidth="150.0" />
+      <Label layoutX="102.0" layoutY="66.0" prefHeight="18.0" prefWidth="132.0" text="Pairing Criteria" />
+      <Label layoutX="311.0" layoutY="66.0" prefHeight="18.0" prefWidth="171.0" text="Grouping Criteria" />
+      <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="69.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/pair.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="278.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/pair.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="475.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6) Food preferences: Couples and groups should ideally have similar food preferences. Egali people can be used as flexible partners and should preferably be combined with Fleischi people to avoid cancelations after the pairing has been announced." wrappingWidth="257.21630859375">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="478.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7) Minimize significant age differences, to enhance participant comfort and compatibility." wrappingWidth="213.21630859375">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="478.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8) Gender Diversity: Aim for mixed-gender pairs and groups to ensure high gender diversity." wrappingWidth="213.21630859375">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="478.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9) Arrange courses such that the distance between them is minimized, ideally progressing towards the location of the After-Dinner Party. This helps to streamline the dining experience and naturally guide participants towards the event's conclusion." wrappingWidth="251.21630859375">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Criteria for combining pairs and groups">
+         <font>
+            <Font name="Arial Hebrew Bold" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

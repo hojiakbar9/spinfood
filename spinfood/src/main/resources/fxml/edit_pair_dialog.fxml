@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="658.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditPairDialogController">
+    <children>
+        <Label text="Participant 1 Name:" />
+        <TextField fx:id="participant1NameField" />
+        <Label text="Participant 2 Name:" />
+        <TextField fx:id="participant2NameField" />
+        <Label text="Joint Registration:" />
+        <TextField fx:id="jointRegistrationField" />
+        <Label text="Kitchen Longitude:" />
+        <TextField fx:id="kitchenLongitudeField" />
+        <Label text="Kitchen Latitude:" />
+        <TextField fx:id="kitchenLatitudeField" />
+        <Label text="Main Food Preference:" />
+        <TextField fx:id="mainFoodPreferenceField" />
+        <Label text="Pair Number:" />
+        <TextField fx:id="pairNumberField" />
+        <Label text="Appetizer Group Number:" />
+        <TextField fx:id="appetizerGroupNumberField" />
+        <Label text="Main Course Group Number:" />
+        <TextField fx:id="mainCourseGroupNumberField" />
+        <Label text="Dessert Group Number:" />
+        <TextField fx:id="dessertGroupNumberField" />
+        <Label text="Kitchen Supplier:" />
+        <TextField fx:id="kitchenSupplierField" />
+        <Label text="Cooking Course:" />
+        <TextField fx:id="cookingCourseField" />
+        <Button onAction="#handleSave" text="Save">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Button>
+    </children>
+</VBox>

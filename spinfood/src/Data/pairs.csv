@@ -1,0 +1,7 @@
+"Participant1","Participant2","JointRegistration","KitchenLongitude","KitchenLatitude","Preference","PairNumber","AppetizerNr","MainNr","DessertNr","KitchenSupplier","CookingCourse"
+"Person3","Personx1","true","8.681372017093311","50.5820794170933","VEGAN","1","13","13","15","false","APPETIZER"
+"Person4","Personx2","true","8.683278559866123","50.58156255986612","VEGGIE","2","14","14","15","false","DESSERT"
+"Person7","Personx3","true","8.661605134221313","50.57631493422131","VEGGIE","3","14","14","13","false","APPETIZER"
+"Person11","Personx4","true","8.681190328226592","50.57991322822659","VEGGIE","4","1","1","1","false","MAIN"
+"Person16","Personx5","true","8.683101670107648","50.584839070107655","VEGAN","5","1","1","2","false","DESSERT"
+"Person19","Personx6","true","8.677666037868752","50.593429237868754","VEGAN","6","1","1","3","false","APPETIZER"

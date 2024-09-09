@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1273.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PairController">
+    <children>
+        <BorderPane fx:id="borderPane" layoutX="-6.0" layoutY="-3.0" prefHeight="783.0" prefWidth="1262.0">
+            <left>
+                <VBox prefHeight="733.0" prefWidth="167.0" style="-fx-background-color: #53ac85;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button alignment="BASELINE_LEFT" minHeight="18.0" minWidth="18.0" mnemonicParsing="false" onMouseClicked="#pairs" prefHeight="31.0" prefWidth="170.0" stylesheets="@../css/styles.css" text="Pairs">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/pair.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <VBox.margin>
+                                <Insets left="10.0" top="30.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="Groups" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#groups" prefHeight="31.0" prefWidth="174.0" stylesheets="@../css/styles.css" text="Groups">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/group.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <VBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#showCriterias" prefHeight="31.0" prefWidth="174.0" stylesheets="@../css/styles.css" text="Criteria">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/criteria.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children>
+                </VBox>
+            </left>
+            <top>
+                <HBox prefHeight="72.0" prefWidth="1241.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/SpinfoodLogo.jpg" />
+                            </image>
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="30.0" top="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label alignment="TOP_LEFT" text="Spinfood" translateX="-5.0" translateY="12.0">
+                            <font>
+                                <Font name="Arial Hebrew Bold" size="25.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="7.0" top="7.0" />
+                            </HBox.margin>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.6080760095011877">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.32549020648002625" green="0.6745098233222961" blue="0.5215686559677124" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.32549020648002625" green="0.6745098233222961" blue="0.5215686559677124" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8509804010391235" green="0.1725490242242813" blue="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                        </Label>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <TabPane fx:id="pairsTabPane" prefHeight="713.0" prefWidth="1084.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="All Pairs">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="682.0" prefWidth="1120.0">
+                                    <children>
+                                        <TableView fx:id="allPairsTableView" layoutX="3.0" prefHeight="617.0" prefWidth="1094.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn fx:id="participant1" prefWidth="89.59991759061813" text="Participant 1" />
+                                                <TableColumn fx:id="participant2" prefWidth="96.79998779296875" text="Participant 2" />
+                                                <TableColumn fx:id="jointRegistration" prefWidth="107.20001220703125" text="Joint Registration" />
+                                                <TableColumn fx:id="kitchenLongitude" prefWidth="116.0" text="Kitchen Longitude" />
+                                                <TableColumn fx:id="kitchenLatitude" minWidth="3.200042724609375" prefWidth="92.0" text="Kitchen Latitude" />
+                                                <TableColumn fx:id="preference" minWidth="0.0" prefWidth="77.5999755859375" text="Preference" />
+                                                <TableColumn fx:id="pairNumber" minWidth="0.0" prefWidth="62.4000244140625" text="Pair Number" />
+                                                <TableColumn fx:id="appetizerNumber" minWidth="0.0" prefWidth="92.79998779296875" text="Appetizer Nr." />
+                                                <TableColumn fx:id="mainNumber" minWidth="0.0" prefWidth="59.20001220703125" text="Main Nr" />
+                                                <TableColumn fx:id="dessertNumber" minWidth="0.0" prefWidth="75.20001220703125" text="Dessert Nr." />
+                                                <TableColumn fx:id="kitchenSupplier" minWidth="0.0" prefWidth="100.800048828125" text="Kitchen Supplier" />
+                                                <TableColumn fx:id="cookingCourse" minWidth="0.0" prefWidth="113.5999755859375" text="Cooking Course" />
+                                            </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                        </TableView>
+                              <Button layoutX="14.0" layoutY="630.0" mnemonicParsing="false" onAction="#deletePair" text="Remove" />
+                              <Button layoutX="89.0" layoutY="630.0" mnemonicParsing="false" onMouseClicked="#editPair" prefHeight="25.0" prefWidth="59.0" text="Edit" />
+                              <Button layoutX="938.0" layoutY="630.0" mnemonicParsing="false" onAction="#undo" text="Undo" />
+                              <Button layoutX="1001.0" layoutY="630.0" mnemonicParsing="false" onAction="#redo" text="Redo" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab fx:id="SuccessorParticipants" text="Successor Participants">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="960.0">
+                           <children>
+                              <TableView fx:id="successorParticipantsTableView" layoutX="-3.0" layoutY="-4.0" prefHeight="641.0" prefWidth="1092.0">
+                                <columns>
+                                  <TableColumn fx:id="name" prefWidth="88.79999089241028" text="Name" />
+                                    <TableColumn fx:id="foodPreference" prefWidth="101.60000610351562" text="Food Preference" />
+                                    <TableColumn fx:id="age" prefWidth="66.39997863769531" text="Age" />
+                                    <TableColumn fx:id="sex" prefWidth="73.5999755859375" text="Sex" />
+                                    <TableColumn fx:id="kitchen" prefWidth="96.80001831054688" text="Kitchen" />
+                                    <TableColumn fx:id="kitchenStory" prefWidth="100.79998779296875" text="Kitchen Story" />
+                                    <TableColumn fx:id="kitchenLongitudeForParticipant" prefWidth="90.4000244140625" text="K_Longitude" />
+                                    <TableColumn fx:id="kitchenLatitudeForParticipant" prefWidth="106.4000244140625" text="K_Latitude" />
+                                    <TableColumn fx:id="name2" prefWidth="128.79998779296875" text="Name_2" />
+                                    <TableColumn fx:id="age2" minWidth="0.0" prefWidth="96.0" text="Age_2" />
+                                    <TableColumn fx:id="sex2" prefWidth="129.60015869140625" text="Sex_2" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="22.0" layoutY="643.0" mnemonicParsing="false" onAction="#reassemblePair" text="Add Pair" />
+                              <Button layoutX="948.0" layoutY="642.0" mnemonicParsing="false" onAction="#undo" text="undo" />
+                              <Button layoutX="1004.0" layoutY="643.0" mnemonicParsing="false" onAction="#redo" text="redo" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="PerformanceIndicators" text="Performance Indicators">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="indicatorsListView" layoutX="-1.0" prefHeight="696.0" prefWidth="1090.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="PerformanceIndicators1" text="Compare">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="compareListView" layoutX="2.0" layoutY="2.0" prefHeight="443.0" prefWidth="800.0" />
+                              <ComboBox fx:id="versionSelector" layoutX="889.0" layoutY="59.0" prefWidth="150.0" />
+                              <Button layoutX="937.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#comparePairs" text="Compare" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
